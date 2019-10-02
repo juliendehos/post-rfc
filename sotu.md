@@ -79,8 +79,8 @@ Legend:
   * 🌱 [Game programming](#game-programming)
   * 🌱 [ARM processor support](#arm-processor-support)
   * 🌱 [Computer Vision](#computer-vision)
+  * 🌱 [Mobile apps](#mobile-apps)
   * 🌱/⛔ [Systems / embedded programming](#systems--embedded-programming)
-  * 🌱/⛔ [Mobile apps](#mobile-apps)
 * [Common Programming Needs](#common-programming-needs)
   * 🏆 [Maintenance](#maintenance)
   * 🏆 [Single-machine Concurrency](#single-machine-concurrency)
@@ -161,6 +161,8 @@ languages which you can use to write compilers to or from these languages.
 * [`Lasca`](http://lasca-lang.org) (a small Scala-like language with global type inference and optional dynamic mode on LLVM backend)
 * [`verve`](https://github.com/tadeuzagallo/verve-lang) - Functional language with object-oriented support
 * [`sixten`](https://github.com/ollef/sixten) - Haskell/Idris-style language with a focus on precise and efficient memory layout
+* [`carp`](https://github.com/carp-lang/Carp) - An efficient, statically typed Lisp with ownership tracking.
+* [`unison`](https://github.com/unisonweb/unison) - A purely functional distributed programming language with algebraic effects.
 * [`oden`](https://github.com/oden-lang/oden) (no longer in active development)
 
 **Educational resources:**
@@ -247,6 +249,7 @@ of the Haskell runtime.
 * [ZoomHub](http://zoomhub.net/) ([Code](https://github.com/zoomhub/zoomhub))
 * [PostgREST](https://postgrest.com/en/v4.3/) - Generates a REST API for a
   Postgres database
+* [Hasura](https://github.com/hasura/graphql-engine)
 
 **Propaganda:**
 
@@ -317,7 +320,7 @@ features such as:
 
 **Notable libraries:**
 
-* [`shelly`](https://hackage.haskell.org/package/shelly) / [`turtle`](https://hackage.haskell.org/package/turtle) - scripting libraries (Full disclosure: I authored `turtle`)
+* [`shelly`](https://hackage.haskell.org/package/shelly) / [`turtle`](https://hackage.haskell.org/package/turtle) / [`shellmet`](http://hackage.haskell.org/package/shellmet) - scripting libraries (Full disclosure: I authored `turtle`)
 * [`optparse-applicative`](https://hackage.haskell.org/package/optparse-applicative) / [`cmdargs`](https://hackage.haskell.org/package/cmdargs) - command-line argument parsing
 * [`haskeline`](https://hackage.haskell.org/package/haskeline) - a complete Haskell implementation of `readline` for console
   building
@@ -714,6 +717,9 @@ foreign function interface.  For console games, you have no hope.
   that also lets you embed shader code directly within Haskell.  See the
   [GPipe wiki](https://wiki.haskell.org/GPipe) to learn more
 
+**Educational resources:**
+
+* [Purely Functional Games](https://gilmi.me/blog/post/2018/07/24/pfgames)
 
 <br>
 
@@ -790,6 +796,25 @@ covering it.
 
 <br>
 
+## Mobile apps
+
+**Rating:** Immature
+
+This greatly lags behind using languages that are natively supported by the
+mobile platform (i.e. Java for Android or Objective-C / Swift for iOS).
+
+However, one route is to compile Haskell to a supported language.  For
+example, you can compile Haskell to Java using [Eta](https://eta-lang.org/)
+to port Haskell games to Android.
+
+**Educational resources:**
+
+* [Android 2048 game in Eta](https://github.com/Jyothsnasrinivas/eta-android-2048)
+* [Android development in Haskell](https://wiki.haskell.org/Android)
+* [iPhone development in Haskell](https://wiki.haskell.org/IPhone)
+
+<br>
+
 ## Systems / embedded programming
 
 **Rating:** Bad / Immature (See description)
@@ -823,27 +848,6 @@ approach championed by the company Galois.
 **Educational resources:**
 
 * [/r/haskell - Haskell compiled down to Embedded Hardware](https://www.reddit.com/r/haskell/comments/3gyol1/haskell_compiled_down_to_embedded_hardware/)
-
-<br>
-
-## Mobile apps
-
-**Rating:** Immature? / Bad? (Uncertain)
-
-This greatly lags behind using the language that is natively supported by the
-mobile platform (i.e. Java for Android or Objective-C / Swift for iOS).
-
-I don't know a whole lot about this area, but I'm definitely sure it is far
-from mature.  All I can do is link to the resources I know of for Android and
-iPhone development using Haskell.
-
-I also can't really suggest improvements because I'm pretty out of touch with
-this branch of the Haskell ecosystem.
-
-**Educational resources:**
-
-* [Android development in Haskell](https://wiki.haskell.org/Android)
-* [iPhone development in Haskell](https://wiki.haskell.org/IPhone)
 
 <br>
 
@@ -977,6 +981,7 @@ memory and non-blocking I/O.
 * [`stm`](https://hackage.haskell.org/package/stm) - Software transactional memory
 * [`unagi-chan`](https://hackage.haskell.org/package/unagi-chan) - High performance channels
 * [`async`](https://hackage.haskell.org/package/async) - Futures library
+* [`streamly`](http://hackage.haskell.org/package/streamly) - A streaming library offering high performance concurrency
 
 **Educational resources:**
 
@@ -1227,6 +1232,7 @@ languages, including:
 * [`hspec`](https://hackage.haskell.org/package/hspec) - Testing library analogous to Ruby's RSpec
 * [`HUnit`](https://hackage.haskell.org/package/HUnit) - Testing library analogous to Java's JUnit
 * [`tasty`](https://hackage.haskell.org/package/tasty) - Combination unit / regression / property testing library
+* [`hedgehog`](http://hackage.haskell.org/package/hedgehog) - property-based testing with integrated shrinking
 - [`HTF`](https://hackage.haskell.org/package/HTF) - Preprocessor based unit testing with various output formats
 
 **Educational resources:**
@@ -1262,8 +1268,9 @@ pretty good and diverse enough to cover the majority of use cases.
 * [`containers`](https://hackage.haskell.org/package/containers) - High-performance `Map`s, `Set`s, `Tree`s, `Graph`s, `Seq`s
 * [`unordered-containers`](https://hackage.haskell.org/package/unordered-containers) - High-performance `HashMap`s, HashSets
 * [`accelerate`](https://hackage.haskell.org/package/accelerate) / [`accelerate-*`](https://hackage.haskell.org/packages/search?terms=accelerate) - GPU programming
-* [`repa`](https://hackage.haskell.org/package/repa) / [`repa-*`](https://hackage.haskell.org/packages/search?terms=repa) - parallel shape-polymorphic arrays
+* [`massiv`](https://hackage.haskell.org/package/massiv) / [`repa`](https://hackage.haskell.org/package/repa) / [`repa-*`](https://hackage.haskell.org/packages/search?terms=repa) - parallel shape-polymorphic arrays
 * [`discrimination`](http://hackage.haskell.org/package/discrimination) - Efficient linear-time sorting for user-defined datatypes
+* [`algebraic-graphs`](https://hackage.haskell.org/package/algebraic-graphs)
 
 <br>
 
@@ -1284,6 +1291,7 @@ features include:
 **Notable libraries:**
 
 * [`criterion`](https://hackage.haskell.org/package/criterion)
+* [`gauge`](http://hackage.haskell.org/package/gauge) offers a similar feature set as `criterion` but has much fewer dependencies
 
 **Educational resources:**
 
@@ -1306,6 +1314,7 @@ inefficient.  You should always use `Text` whenever possible.
 
 * [`text`](https://hackage.haskell.org/package/text)
 * [`text-icu`](https://hackage.haskell.org/package/text-icu)
+* [`unicode-transforms`](https://hackage.haskell.org/package/unicode-transforms) – Unicode normalization
 
 <br>
 
@@ -1327,7 +1336,7 @@ rich ecosystem including common streaming tasks like:
 
 **Notable libraries:**
 
-* [`conduit`](https://hackage.haskell.org/package/conduit) / [`io-streams`](https://hackage.haskell.org/package/io-streams) / [`pipes`](https://hackage.haskell.org/package/pipes) / [`streaming`](https://hackage.haskell.org/package/streaming) - Stream programming libraries (Full disclosure: I authored `pipes` and wrote the official `io-streams` tutorial)
+* [`conduit`](https://hackage.haskell.org/package/conduit) / [`io-streams`](https://hackage.haskell.org/package/io-streams) / [`pipes`](https://hackage.haskell.org/package/pipes) / [`streaming`](https://hackage.haskell.org/package/streaming) / [`streamly`](http://hackage.haskell.org/package/streamly) - Stream programming libraries (Full disclosure: I authored `pipes` and wrote the official `io-streams` tutorial)
 * [`machines`](https://hackage.haskell.org/package/machines) - Networked stream transducers library
 
 **Educational resources:**
@@ -1335,6 +1344,7 @@ rich ecosystem including common streaming tasks like:
 * [The official `conduit` tutorial](https://www.fpcomplete.com/school/to-infinity-and-beyond/pick-of-the-week/conduit-overview)
 * [The official `pipes` tutorial](http://hackage.haskell.org/package/pipes/docs/Pipes-Tutorial.html)
 * [The official `io-streams` tutorial](http://hackage.haskell.org/package/io-streams/docs/System-IO-Streams-Tutorial.html)
+* [A benchmark of popular streaming libraries](https://github.com/composewell/streaming-benchmarks)
 
 <br>
 
@@ -1360,10 +1370,11 @@ ongoing work to improve the serialization speed of existing libraries.
 
 **Notable libraries:**
 
-* [`binary`](https://hackage.haskell.org/package/binary) / [`cereal`](https://hackage.haskell.org/package/cereal) - serialization / deserialization libraries
+* [`binary`](https://hackage.haskell.org/package/binary) / [`cereal`](https://hackage.haskell.org/package/cereal) / [`serialise`](http://hackage.haskell.org/package/serialise) / [`store`](http://hackage.haskell.org/package/store) - serialization / deserialization libraries
 
 **Educational resources:**
 
+* [Benchmarks of several popular serialization libraries](https://github.com/haskell-perf/serialization)
 * [Faster binary serialization](http://code.haskell.org/~duncan/binary-experiment/binary.pdf) / [Better, faster binary serialization](https://github.com/meiersi/HaskellerZ/blob/master/meetups/20150529-ZuriHac2015_Duncan_Coutts-Better_Faster_Binary_Serialization/binary.pdf) - Slides on serialization efficiency improvements
 
 <br>
@@ -1381,9 +1392,11 @@ not much of an issue.
 **Notable libraries:**
 
 * [`aeson`](https://hackage.haskell.org/package/aeson) - JSON encoding/decoding
-* [`cassava`](https://hackage.haskell.org/package/cassava) - CSV encoding/decoding
+* [`cassava`](https://hackage.haskell.org/package/cassava) / [`sv`](http://hackage.haskell.org/package/sv)- CSV encoding/decoding
 * [`yaml`](https://hackage.haskell.org/package/yaml) - YAML encoding/decoding
+* [`HsYAML`](https://hackage.haskell.org/package/HsYAML) - pure Haskell YAML 1.2 parser
 * [`xml`](https://hackage.haskell.org/package/xml) - XML encoding/decoding
+* [`tomland`](http://hackage.haskell.org/package/tomland) - TOML encoding/decoding
 
 <br>
 
@@ -1432,7 +1445,9 @@ Haskell has decent logging support.  That's pretty much all there is to say.
 * [`fast-logger`](https://hackage.haskell.org/package/fast-logger) - High-performance multicore logging system
 * [`hslogger`](https://hackage.haskell.org/package/hslogger) - Logging library analogous to Python's `logging` library
 * [`monad-logger`](https://hackage.haskell.org/package/monad-logger) - add logging with line numbers to your monad stack. Uses fast-logger under the hood.
+* [`katip`](http://hackage.haskell.org/package/katip) - Structured logging
 * [`log`](https://hackage.haskell.org/package/log-base) - Logging system with ElasticSearch, PostgreSQL and stdout sinks.
+* [`co-log`](https://hackage.haskell.org/package/co-log) - Composable contravariant comonadic logging library.
 
 <br>
 
@@ -1511,7 +1526,7 @@ store you use.
 
 **Notable libraries:**
 
-* [`mysql-simple`](https://hackage.haskell.org/package/mysql-simple) - MySQL bindings
+* [`mysql-haskell`](http://hackage.haskell.org/package/mysql-haskell) / [`mysql-simple`](https://hackage.haskell.org/package/mysql-simple) - MySQL bindings
 * [`postgresql-simple`](https://hackage.haskell.org/package/postgresql-simple) - Postgres bindings
 * [`persistent`](https://hackage.haskell.org/package/persistent) - Database-agnostic ORM that supports automatic migrations
 * [`esqueleto`](https://hackage.haskell.org/package/esqueleto) / [`relational-record`](https://hackage.haskell.org/package/relational-record) / [`opaleye`](https://hackage.haskell.org/package/opaleye) - type-safe APIs for building well-formed SQL queries
